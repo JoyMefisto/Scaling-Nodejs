@@ -9,8 +9,3 @@ http.createServer((req, res) => {
 }).listen(8080, () => {
     console.log(`Started ${pid}`);
 });
-
-// Исключение приложения для проверки отказоустойчивости приложения
-setTimeout(() => {
-    throw new Error('Oooops');
-}, Math.ceil(Math.random() * 3) * 1000);
